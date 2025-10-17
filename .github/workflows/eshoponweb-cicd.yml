@@ -9,7 +9,7 @@ env:
   LOCATION: centralus
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: b2dd5abd-3642-48b8-929e-2cafb8b4257d
-  WEBAPP-NAME: eshoponweb-webapp-Push_Tech_DevOps_Training
+  WEBAPP-NAME: eshoponweb-webapp-Pushtech
 
 
 jobs:
@@ -87,7 +87,7 @@ jobs:
         subscriptionId: ${{ env.SUBSCRIPTION-ID }}
         resourceGroupName: ${{ env.RESOURCE-GROUP }}
         template: bicep-template/webapp.bicep
-        parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
+        parameters: webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}
         failOnStdErr: false   
     
     # Publish website to Azure App Service (WebApp)
